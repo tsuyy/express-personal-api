@@ -1,3 +1,6 @@
+//require models
+// var db = require('./models');
+
 // require express and other modules
 var express = require('express'),
     app = express();
@@ -20,6 +23,23 @@ app.use(function(req, res, next) {
  ************/
 
 // var db = require('./models');
+var profile = {
+  name: 'Yvonne Tsu',
+  githubLink: 'https://github.com/tsuyy',
+  currentCity: 'San Francisco, CA',
+  pets: [ {name: 'Tiger',
+           type: 'Doge',
+           breed: 'Siberian and Malamute Husky Mix',
+           age: '7 yeards old',
+           imageUrl: '/public/images/tiger1.jpg'},
+          {name: 'Koda',
+           type: 'Doge',
+           breed: 'German Shepherd',
+           age: '2 months old',
+           imageUrl: '/public/images/koda1.jpg'} ],
+  image: 'abc'
+}
+
 
 /**********
  * ROUTES *
@@ -51,14 +71,22 @@ app.get('/api', function apiIndex(req, res) {
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"},
-      {method: "GET", path: "/api/places", description: "Places I wanna go"},
-      {method: "GET", path: "/api/places/:id", description: "One of the places I wanna go"},
-      {method: "POST", path: "/api/places", description: "Newly discovered place I wanna go"},
-      {method: "PUT", path: "/api/places/:id", description: "Update info on one of the places"},
-      {method: "DELETE", path: "/api/places/:id", description: "Delete one of the places"}
+      {method: "GET", path: "/api/sites", description: "Places I wanna go"},
+      {method: "GET", path: "/api/sites/:id", description: "One of the places I wanna go"},
+      {method: "POST", path: "/api/sites", description: "Newly discovered place I wanna go"},
+      {method: "PUT", path: "/api/sites/:id", description: "Update info on one of the places"},
+      {method: "DELETE", path: "/api/sites/:id", description: "Delete one of the places"}
     ]
   })
 });
+
+
+// get profile
+app.get('/api/profile', function (req, res) {
+  res.json(profile);
+});
+
+
 
 /**********
  * SERVER *

@@ -5,7 +5,8 @@ var mongoose = require('mongoose'),
 var SiteSchema = new Schema({
   name: String,
   location: String,
-  image: String,
+  coordinates: String,
+  image: String
 
 });
 
