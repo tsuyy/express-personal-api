@@ -24,6 +24,7 @@ var db = require('./models');
 var profile = {
   name: 'Yvonne Tsu',
   githubLink: 'https://github.com/tsuyy',
+  instagram: 'https://www.instagram.com/yvonnetsu/',
   currentCity: 'San Francisco, CA',
   pets: [ {name: 'Tiger',
            type: 'Doge',
@@ -35,7 +36,7 @@ var profile = {
            breed: 'German Shepherd',
            age: '2 months old',
            imageUrl: '/public/images/koda1.jpg'} ],
-  image: 'abc'
+  image: '/public/images/me.jpg'
 }
 
 
@@ -69,11 +70,11 @@ app.get('/api', function apiIndex(req, res) {
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"},
-      {method: "GET", path: "/api/sites", description: "Places that I want to go"},
-      {method: "GET", path: "/api/sites/:id", description: "One of the places that I want to go"},
-      {method: "POST", path: "/api/sites", description: "Newly discovered place that I want to go"},
-      {method: "PUT", path: "/api/sites/:id", description: "Update info on one of the sites"},
-      {method: "DELETE", path: "/api/sites/:id", description: "Delete one of the sites"}
+      {method: "GET", path: "/api/destinations", description: "Places that I want to go"},
+      {method: "GET", path: "/api/destinations/:id", description: "One of the destinations that I want to go"},
+      {method: "POST", path: "/api/destinations", description: "Newly discovered destinations that I want to go"},
+      {method: "PUT", path: "/api/destinations/:id", description: "Update info on one of the destinations"},
+      {method: "DELETE", path: "/api/destinations/:id", description: "Delete one of the destinations"}
     ]
   })
 });
@@ -84,49 +85,49 @@ app.get('/api/profile', function (req, res) {
   res.json(profile);
 });
 
-// get all sites
-app.get('/api/sites', function (req, res) {
-  db.Site.find({}, function(err, sites) {
+// get all destinations
+app.get('/api/destinations', function (req, res) {
+  db.Destination.find({}, function(err, destinations) {
     if (err) { return console.log("index error: " + err); }
-    res.json(sites);
+    res.json(destinations);
   });
 });
 
 // get one place
-app.get('/api/sites/:id', function (req, res) {
+app.get('/api/destinations/:id', function (req, res) {
   // find one place by its id
-  var siteId = req.params._id;
-  db.Site.findOne(siteId, function(err, site) {
+  var destinationId = req.params._id;
+  db.Destination.findOne(desitinationId, function(err, destination) {
     if(err){ console.log(err); }
-    res.send(site);
+    res.send(destination);
   });
 });
 
-// create new place
-app.post('/api/sites', function (req, res) {
-  // create new site with form data (`req.body`)
-  var newSite = req.body;
-  db.Site.create(newSite, function(err, book) {
+// create new destinations
+app.post('/api/destinations', function (req, res) {
+  // create new destination with form data (`req.body`)
+  var newDestination = req.body;
+  db.Destination.create(newDestination, function(err, destination) {
     if(err){ console.log(err); }
-    res.send(newSite);
+    res.send(newDestination);
   });
 });
 
-// update site
-app.put('/api/sites/:id', function(req,res){
-  var siteId = req.params.id;
-  var siteData = req.body;
+// update destination
+app.put('/api/destinations/:id', function(req,res){
+  var destinationId = req.params.id;
+  var destinationData = req.body;
 
-  db.Site.findOneAndUpdate(siteId, siteData, {new: true},
-    function(err, newSite) {
-      res.send(newSite);
+  db.Destination.findOneAndUpdate(destinationId, destinationData, {new: true},
+    function(err, newDestination) {
+      res.send(newDestination);
   });
 });
 
-// delete site by id
-app.delete('/api/sites/:id', function (req, res) {
-  var siteId = req.params.id;
-  db.Site.findOneAndRemove(siteId, function(err, site) {
+// delete destination by id
+app.delete('/api/destinations/:id', function (req, res) {
+  var destinationId = req.params.id;
+  db.Destination.findOneAndRemove(destinationId, function(err, destination) {
     res.sendStatus(204);
   });
 });

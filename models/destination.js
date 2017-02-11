@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 
-var SiteSchema = new Schema({
+var DestinationSchema = new Schema({
   name: String,
   location: String,
   coordinates: String,
@@ -10,6 +10,6 @@ var SiteSchema = new Schema({
 
 });
 
-var Site = mongoose.model('Site', SiteSchema);
+var Destination = mongoose.model('Destination', DestinationSchema);
 
-module.exports = Site;
+module.exports = Destination;

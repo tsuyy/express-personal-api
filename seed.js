@@ -34,17 +34,17 @@ var togo_list = [
 ]
 
 //remove all records that match {} -- which means remove ALL records
-db.Site.remove({}, function(err, sites){
+db.Destination.remove({}, function(err, destinations){
   if(err) {
     console.log('Error occurred in remove', err);
   } else {
-    console.log('removed all sites');
+    console.log('removed all destinations');
 
     // create new records based on the array togo_list
-    db.Site.create(togo_list, function(err, sites){
+    db.Destination.create(togo_list, function(err, destinations){
       if (err) { return console.log('err', err); }
-      console.log("created", sites.length, "places");
-      console.log(sites);
+      console.log("created", destinations.length, "places");
+      console.log(destinations);
       process.exit();
     });
   }

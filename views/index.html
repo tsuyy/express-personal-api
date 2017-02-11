@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blank</title>
+    <title>WANDERLUST</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chathura" rel="stylesheet">
 
     <!-- VENDOR SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -16,14 +19,79 @@
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand page-scroll" href="#page-top"><span class='glyphicon glyphicon-home' aria-hidden='true'></span></a>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <h4 class='nav-links'><a class="page-scroll" href="#api-docs">api docs</a></h4>
+                    </li>
+                    <li>
+                        <h4 class='nav-links'><a class="page-scroll" href="#profile">profile</a></h4>
+                    </li>
+                    <li>
+                        <h4 class='nav-links'><a class="page-scroll" href="#destinations">destinations</a></h4>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
+    </nav>
+
+      <!-- homepage section -->
+      <section class="homepage-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-12 col-lg-12">
+                      <h1 class='text-center'>wanderlust<span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span></h1>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- api-docs section -->
+      <section id="api-docs" class="api-docs-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-12 col-lg-12">
+                    <h4 class='text-center'>API docs</h4>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- profile section -->
+      <section id="profile" class="profile-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-12 col-lg-12">
+                    <h4 class='text-center'>profile</h4>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- destinations section -->
+      <section id="destinations" class="destination-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-12 col-lg-12">
+                    <h4 class='text-center'>destinations</h4>
+                  </div>
+              </div>
+          </div>
+      </section>
+
   </body>
 </html>
