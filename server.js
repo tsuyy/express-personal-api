@@ -36,7 +36,7 @@ var profile = {
            breed: 'German Shepherd',
            age: '2 months old',
            imageUrl: '/public/images/koda1.jpg'} ],
-  image: '/public/images/me.jpg'
+  image: 'https://scontent.fsnc1-4.fna.fbcdn.net/v/t31.0-8/12132664_10153576831141043_7913957982870882833_o.jpg?oh=c90dee7b59ef852a6ed3fe02628ede60&oe=58FDD714'
 }
 
 

@@ -65,7 +65,12 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-8 col-md-12 col-lg-12">
-                    <h4 class='text-center'>API docs</h4>
+                    <h4 class='text-center'><a href='/api'>API docs</a></h4>
+                    <div>
+                      <ul id='apiList'>
+
+                      </ul>
+                    </div>
                   </div>
               </div>
           </div>
@@ -77,6 +82,15 @@
               <div class="row">
                   <div class="col-md-8 col-md-12 col-lg-12">
                     <h4 class='text-center'>profile</h4>
+                    <br>
+                    <img id='profile-image' src=''>
+                    <div>
+                      <ul class='list-unstyled profile-info'>
+                        <li><h4><span id='name'></span><h4></li>
+                        <li><h4>📍<span id='city'></span><h4></li>
+                        <li><span ><a class='profile-links'><img src=''><img src=''><img src=''></a></li>
+                      </ul>
+                    </div>
                   </div>
               </div>
           </div>
@@ -84,12 +98,25 @@
 
       <!-- destinations section -->
       <section id="destinations" class="destination-section">
+        <h4 class='text-center'>destinations</h4>
           <div class="container">
               <div class="row">
+                <form id='newDestinationForm'>
                   <div class="col-md-8 col-md-12 col-lg-12">
-                    <h4 class='text-center'>destinations</h4>
-                  </div>
-              </div>
+                    <div class="input-group input-group-sm">
+                      <input type="text" class="form-control" placeholder="add destination..">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><span class='glyphicon glyphicon-globe'></span></button>
+                      </span>
+                    </div>  <!-- /input-group -->
+                  </div>  <!-- grid -->
+                </form>
+                <br>
+                <div>
+                  <ul id='destinationTarget' class='text-center list-unstyled'>
+                  </ul>
+                </div>
+              </div>  <!-- container -->
           </div>
       </section>
 

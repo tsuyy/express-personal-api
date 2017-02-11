@@ -30,7 +30,19 @@ var togo_list = [
     location: 'San Francisco, CA',
     coordinates: '37.7936° N, 122.4836° W',
     image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
-  },
+  }
+  // {
+  //   name: 'Kirby Cove',
+  //   location: 'Sausalito, CA',
+  //   coordinates: '37.8286° N, 122.4905° W',
+  //   image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
+  // },
+  // {
+  //   name: 'Baker Beach',
+  //   location: 'San Francisco, CA',
+  //   coordinates: '37.7936° N, 122.4836° W',
+  //   image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
+  // },
 ]
 
 //remove all records that match {} -- which means remove ALL records
