@@ -1,6 +1,3 @@
-//require models
-// var db = require('./models');
-
 // require express and other modules
 var express = require('express'),
     app = express();
@@ -22,7 +19,8 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
+
 var profile = {
   name: 'Yvonne Tsu',
   githubLink: 'https://github.com/tsuyy',
@@ -71,11 +69,11 @@ app.get('/api', function apiIndex(req, res) {
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"},
-      {method: "GET", path: "/api/sites", description: "Places I wanna go"},
-      {method: "GET", path: "/api/sites/:id", description: "One of the places I wanna go"},
-      {method: "POST", path: "/api/sites", description: "Newly discovered place I wanna go"},
-      {method: "PUT", path: "/api/sites/:id", description: "Update info on one of the places"},
-      {method: "DELETE", path: "/api/sites/:id", description: "Delete one of the places"}
+      {method: "GET", path: "/api/sites", description: "Places that I want to go"},
+      {method: "GET", path: "/api/sites/:id", description: "One of the places that I want to go"},
+      {method: "POST", path: "/api/sites", description: "Newly discovered place that I want to go"},
+      {method: "PUT", path: "/api/sites/:id", description: "Update info on one of the sites"},
+      {method: "DELETE", path: "/api/sites/:id", description: "Delete one of the sites"}
     ]
   })
 });
@@ -84,6 +82,14 @@ app.get('/api', function apiIndex(req, res) {
 // get profile
 app.get('/api/profile', function (req, res) {
   res.json(profile);
+});
+
+// get all sites
+app.get('/api/sites', function (req, res) {
+  db.Site.find({}, function(err, sites) {
+    if (err) { return console.log("index error: " + err); }
+    res.json(sites);
+  });
 });
 
 
