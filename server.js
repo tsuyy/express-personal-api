@@ -102,7 +102,34 @@ app.get('/api/sites/:id', function (req, res) {
   });
 });
 
+// create new place
+app.post('/api/sites', function (req, res) {
+  // create new site with form data (`req.body`)
+  var newSite = req.body;
+  db.Site.create(newSite, function(err, book) {
+    if(err){ console.log(err); }
+    res.send(newSite);
+  });
+});
 
+// update site
+app.put('/api/sites/:id', function(req,res){
+  var siteId = req.params.id;
+  var siteData = req.body;
+
+  db.Site.findOneAndUpdate(siteId, siteData, {new: true},
+    function(err, newSite) {
+      res.send(newSite);
+  });
+});
+
+// delete site by id
+app.delete('/api/sites/:id', function (req, res) {
+  var siteId = req.params.id;
+  db.Site.findOneAndRemove(siteId, function(err, site) {
+    res.sendStatus(204);
+  });
+});
 
 /**********
  * SERVER *
