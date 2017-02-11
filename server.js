@@ -92,6 +92,16 @@ app.get('/api/sites', function (req, res) {
   });
 });
 
+// get one place
+app.get('/api/sites/:id', function (req, res) {
+  // find one place by its id
+  var siteId = req.params._id;
+  db.Site.findOne(siteId, function(err, site) {
+    if(err){ console.log(err); }
+    res.send(site);
+  });
+});
+
 
 
 /**********
