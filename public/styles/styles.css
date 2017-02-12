@@ -47,7 +47,7 @@ html {
     height: 100%;
     padding-top: 20px;
     text-align: center;
-    background: #eee;
+    background: #F7F5F5;
 }
 
 .profile-section {
@@ -61,7 +61,7 @@ html {
     height: 200%;
     padding-top: 50px;
     text-align: center;
-    background: #eee;
+    background: #F7F5F5;
 }
 
 .destinationlist {
@@ -80,4 +80,13 @@ img {
 #map {
   height: 300px;
   margin-top: 10px;
+}
+
+a {
+  color: #777;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }
