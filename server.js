@@ -24,6 +24,7 @@ var db = require('./models');
 var profile = {
   name: 'Yvonne Tsu',
   githubLink: 'https://github.com/tsuyy',
+  facebook: 'https://www.facebook.com/yvonnnetsu',
   instagram: 'https://www.instagram.com/yvonnetsu/',
   currentCity: 'San Francisco, CA',
   pets: [ {name: 'Tiger',
@@ -36,7 +37,7 @@ var profile = {
            breed: 'German Shepherd',
            age: '2 months old',
            imageUrl: '/public/images/koda1.jpg'} ],
-  image: 'https://scontent.fsnc1-4.fna.fbcdn.net/v/t31.0-8/12132664_10153576831141043_7913957982870882833_o.jpg?oh=c90dee7b59ef852a6ed3fe02628ede60&oe=58FDD714'
+  image: 'http://localhost:3000/images/me.jpg'
 }
 
 
@@ -68,13 +69,13 @@ app.get('/api', function apiIndex(req, res) {
     documentationUrl: "https://github.com/tsuyy/express-personal-api",
     baseUrl: "https://intense-headland-63736.herokuapp.com/",
     endpoints: [
-      {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"},
-      {method: "GET", path: "/api/destinations", description: "Places that I want to go"},
-      {method: "GET", path: "/api/destinations/:id", description: "One of the destinations that I want to go"},
-      {method: "POST", path: "/api/destinations", description: "Newly discovered destinations that I want to go"},
-      {method: "PUT", path: "/api/destinations/:id", description: "Update info on one of the destinations"},
-      {method: "DELETE", path: "/api/destinations/:id", description: "Delete one of the destinations"}
+      {method: "GET", path: "/api", description: "describes all available endpoints"},
+      {method: "GET", path: "/api/profile", description: "about me"},
+      {method: "GET", path: "/api/destinations", description: "places I'm planning to go"},
+      {method: "GET", path: "/api/destinations/:id", description: "one of the destinations that I want to go"},
+      {method: "POST", path: "/api/destinations", description: "add more destinations"},
+      {method: "PUT", path: "/api/destinations/:id", description: "updates on one of the destinations"},
+      {method: "DELETE", path: "/api/destinations/:id", description: "delete one of the destinations"}
     ]
   })
 });

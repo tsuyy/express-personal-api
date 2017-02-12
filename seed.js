@@ -11,25 +11,25 @@ var togo_list = [
     name: 'Fallen Leaf Lake',
     location: 'Lake Forest, CA',
     coordinates: '38.8986° N, 120.0636° W',
-    image: 'http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/evening-at-fallen-leaf-lake-jacek-joniec.jpg'
+    image: ''
   },
   {
     name: 'Point Reyes National Seashore',
     location: 'Inverness, CA',
     coordinates: '38.0723° N, 122.8817° W',
-    image: 'http://natureplaytrips.com/wp-content/uploads/2016/02/point-reyes.png'
+    image: ''
   },
   {
     name: 'Bonsai Rock',
     location: 'New Washoe City, NV',
     coordinates: '39.1852° N, 119.9280° W',
-    image: 'https://static1.squarespace.com/static/55a33b86e4b0858890886370/55a6c8ace4b0393512e40cbf/55aa98e2e4b0a996cf316da5/1437274609284/Bonsai+Sunset-1.jpg?format=1000w'
+    image: ''
   },
   {
     name: 'Baker Beach',
     location: 'San Francisco, CA',
     coordinates: '37.7936° N, 122.4836° W',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
+    image: ''
   }
   // {
   //   name: 'Kirby Cove',
@@ -55,7 +55,7 @@ db.Destination.remove({}, function(err, destinations){
     // create new records based on the array togo_list
     db.Destination.create(togo_list, function(err, destinations){
       if (err) { return console.log('err', err); }
-      console.log("created", destinations.length, "places");
+      console.log("created", destinations.length, "destinations");
       console.log(destinations);
       process.exit();
     });

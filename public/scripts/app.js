@@ -7,12 +7,16 @@ $(document).ready(function(){
 
   $destinationList = $('#destinationTarget');
 
-  // $.ajax({
-  //   method: 'GET',
-  //   url: '/api',
-  //   success: handleSuccess,
-  //   error: handleError
-  // });
+  $('#newDestinationForm').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax({
+      method: 'POST',
+      url: '/api/destinations',
+      data: $(this).serialize(),
+      success: newDestinationSuccess,
+      error: handleError
+    });
+  });
 
   $.ajax({
     method: 'GET',
@@ -27,30 +31,23 @@ $(document).ready(function(){
     success: handleSuccess,
     error: handleError
   });
-  //
-  // $.ajax({
-  //   method: 'GET',
-  //   url: '/api/destination/:id',
-  //   success: handleSuccess,
-  //   error: handleError
-  // });
 
-
-  // $('#newDestinationForm').on('submit', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     method: 'POST',
-  //     url: '/api/destinations',
-  //     data: $(this).serialize(),
-  //     success: newDestinationSuccess,
-  //     error: newDestinationError
-  //   });
-  // });
-
+  $destinationList.on('click', '.deleteBtn', function() {
+    $.ajax({
+      method: 'DELETE',
+      url: '/api/destinations/'+$(this).attr('data-id'),
+      success: deleteDestinationSuccess,
+      error: handleError
+    });
+  });
 
 });
 
-//
+// function getDestinationHtml(destination) {
+//   return $('ul#destinationTarget').append(`
+//     <li><h4>${destinations.name} in ${destinations.location}</h4></li>
+//     `);
+// }
 //
 // function getAllDestinationsHtml(destinations) {
 //   return destinations.map(getDestinationHtml).join("");
@@ -68,7 +65,8 @@ function handleDestinationSuccess(json) {
   console.log(allDestinations);
   // render();
   allDestinations.forEach(function(destinations, i) {
-    $('ul#destinationTarget').append(`<li><h4>${destinations.name} in ${destinations.location}</h4></li>`)
+    $('ul#destinationTarget').append(`<li><h4>${destinations.name} in ${destinations.location}</h4></li>`);
+    // $('ul#destinationTarget').append(`<img src='${destinations.image}'>`);
 
   });
 }
@@ -81,15 +79,25 @@ function handleSuccess(json) {
 }
 
 function handleError(xhr, status, errorThrown) {
-  console.log('uh oh');
+  console.log(errorThrown);
 }
-//
-// function newDestinationSuccess(json) {
-//   $('#newDestinationForm input').val('');
-//   allDestinations.push(json);
-//   render();
-// }
-//
-// function newDestinationError() {
-//   console.log("new destination error!");
-// }
+
+function newDestinationSuccess(json) {
+  $('#newDestinationForm input').val('');
+  allDestinations.push(json);
+  // render();
+}
+
+function deleteDestinationSuccess(json) {
+  var destination = json;
+  var destinationId = destination._id;
+
+  // find the book with the correct ID and remove it from our allBooks array
+  for(var index = 0; index < allDestinations.length; index++) {
+    if(allDestinations[index]._id === destinationId) {
+      allDestinations.splice(index, 1);
+      break;  // we found our book - no reason to keep searching (this is why we didn't use forEach)
+    }
+  }
+  // render();
+}

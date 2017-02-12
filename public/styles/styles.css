@@ -55,7 +55,7 @@ html {
 }
 
 .destination-section {
-    height: 100%;
+    height: 200%;
     padding-top: 50px;
     text-align: center;
     background: #eee;
@@ -63,4 +63,18 @@ html {
 
 .destinationlist {
   font-family: 'Chathura', sans-serif!important;
+}
+
+img {
+  height: 45%;
+  width: 45%
+}
+
+div.sprite {
+  width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+  background-image: url("images/github-logo.png");
+  background-size: 50%;
+  display:block;
 }
