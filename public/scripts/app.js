@@ -76,6 +76,9 @@ function handleSuccess(json) {
   console.log(profileData);
   $('span#name').text(profileData.name);
   $('span#city').append(profileData.currentCity);
+  $('a#fbAnchor').attr('href', profileData.facebook);
+  $('a#igAnchor').attr('href', profileData.instagram);
+  $('a#githubAnchor').attr('href', profileData.githubLink);
 }
 
 function handleError(xhr, status, errorThrown) {
