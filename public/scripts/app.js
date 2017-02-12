@@ -79,6 +79,11 @@ function handleSuccess(json) {
   $('a#fbAnchor').attr('href', profileData.facebook);
   $('a#igAnchor').attr('href', profileData.instagram);
   $('a#githubAnchor').attr('href', profileData.githubLink);
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 37.78, lng: -122.44},
+    zoom: 8
+  });
 }
 
 function handleError(xhr, status, errorThrown) {

@@ -43,9 +43,9 @@ html {
     background: #fff;
 }
 
-.api-docs-section {
+.map-section {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center;
     background: #eee;
 }
@@ -76,3 +76,8 @@ img {
 .column { float: left; margin: 0 2.5% 1em 0; width: 22.5%; }
 .column:nth-child(4n) { margin-right: 0; }
 .column:nth-child(4n+1) { clear: left; }
+
+#map {
+  height: 300px;
+  margin-top: 10px;
+}
