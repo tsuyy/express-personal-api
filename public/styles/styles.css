@@ -17,8 +17,8 @@ h4 {
 }
 
 .nav-links {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   text-decoration: none;
   color: black;
 }
@@ -72,3 +72,7 @@ img {
   height: 45%;
   width: 45%;
 }
+
+.column { float: left; margin: 0 2.5% 1em 0; width: 22.5%; }
+.column:nth-child(4n) { margin-right: 0; }
+.column:nth-child(4n+1) { clear: left; }

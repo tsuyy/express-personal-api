@@ -26,7 +26,7 @@
     <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand page-scroll" href="#page-top"><span class='glyphicon glyphicon-home' aria-hidden='true'></span></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><span class='glyphicon glyphicon-heart-empty' aria-hidden='true'></span></a>
             </div>
 
             <div>
@@ -38,10 +38,10 @@
                         <h4 class='nav-links'><a class="page-scroll" href="#api-docs">api docs</a></h4>
                     </li>
                     <li>
-                        <h4 class='nav-links'><a class="page-scroll" href="#profile">profile</a></h4>
+                      <h4 class='nav-links'><a class="page-scroll" href="#destinations">destinations</a></h4>
                     </li>
                     <li>
-                        <h4 class='nav-links'><a class="page-scroll" href="#destinations">destinations</a></h4>
+                        <h4 class='nav-links'><a class="page-scroll" href="#profile">about me</a></h4>
                     </li>
                 </ul>
             </div>
@@ -76,30 +76,6 @@
           </div>
       </section>
 
-      <!-- profile section -->
-      <section id="profile" class="profile-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-8 col-md-12 col-lg-12">
-                    <h4 class='text-center'>profile</h4>
-                    <br>
-                    <img id='profile-image' src='http://localhost:3000/images/me.jpg'>
-                    <div>
-                      <ul class='list-unstyled profile-info'>
-                        <li><h4><span id='name'></span><h4></li>
-                        <li><h4>📍<span id='city'></span><h4></li>
-                        <li>
-                          <a id='githubAnchor' class="navbar-brand" href="#"><img src="images/github-logo.png" class="img-responsive"></a>
-                          <a id='fbAnchor' class="navbar-brand" href="#"><img src="images/facebook.png" class="img-responsive"></a>
-                          <a id='igAnchor' class="navbar-brand" href="#"><img src="images/instagram.png" class="img-responsive"></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
       <!-- destinations section -->
       <section id="destinations" class="destination-section">
         <h4 class='text-center'>destinations</h4>
@@ -110,17 +86,49 @@
                     <div class="input-group input-group-sm">
                       <input type="text" class="form-control input-sm" placeholder="add destination..">
                       <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><span class='glyphicon glyphicon-globe'></span></button>
+                        <button class="btn btn-default" type="submit"><span class='glyphicon glyphicon-plus' aria-hidden='true'></span></button>
                       </span>
                     </div>  <!-- /input-group -->
                   </div>  <!-- grid -->
                 </form>
                 <br>
-                <div>
-                  <ul id='destinationTarget' class='text-center list-unstyled'>
-                  </ul>
-                </div>
-              </div>  <!-- container -->
+              </div>  <!-- row -->
+            </div>
+            <div class="container">
+          	  <div class="row">
+            		<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+                <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+                <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+                <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+            	  <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=''></div>
+                <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+        	      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+                <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive d-grid" src=""></div>
+              </div>
+            </div>
+      </section>
+
+      <!-- profile section -->
+      <section id="profile" class="profile-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-12 col-lg-12">
+                    <h4 class='text-center'>about me</h4>
+                    <br>
+                    <img id='profile-image' src='http://localhost:3000/images/me.jpg'>
+                    <div>
+                      <ul class='list-unstyled profile-info'>
+                        <li><h4><span id='name'></span><h4></li>
+                        <li><h4>📍<span id='city'>currently in </span><h4></li>
+                        <li>
+                          <a id='githubAnchor' class="navbar-brand" href="#"><img src="images/github-logo.png" class="img-responsive"></a>
+                          <a id='fbAnchor' class="navbar-brand" href="#"><img src="images/facebook.png" class="img-responsive"></a>
+                          <a id='igAnchor' class="navbar-brand" href="#"><img src="images/instagram.png" class="img-responsive"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
           </div>
       </section>
 

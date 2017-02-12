@@ -74,7 +74,7 @@ app.get('/api', function apiIndex(req, res) {
       {method: "GET", path: "/api/destinations", description: "places I'm planning to go"},
       {method: "GET", path: "/api/destinations/:id", description: "one of the destinations that I want to go"},
       {method: "POST", path: "/api/destinations", description: "add more destinations"},
-      {method: "PUT", path: "/api/destinations/:id", description: "updates on one of the destinations"},
+      {method: "PUT", path: "/api/destinations/:id", description: "update on one of the destinations"},
       {method: "DELETE", path: "/api/destinations/:id", description: "delete one of the destinations"}
     ]
   })

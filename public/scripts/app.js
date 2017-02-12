@@ -65,7 +65,7 @@ function handleDestinationSuccess(json) {
   console.log(allDestinations);
   // render();
   allDestinations.forEach(function(destinations, i) {
-    $('ul#destinationTarget').append(`<li><h4>${destinations.name} in ${destinations.location}</h4></li>`);
+    $('div.column').append(`<h4>${destinations.name} in ${destinations.location}</h4>`);
     // $('ul#destinationTarget').append(`<img src='${destinations.image}'>`);
 
   });
