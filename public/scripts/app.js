@@ -66,7 +66,7 @@ function handleDestinationSuccess(json) {
   // render();
   allDestinations.forEach(function(destinations, i) {
     // $('div.column').append(`<h4>${destinations.name} in ${destinations.location}</h4>`);
-    //$('img.d-grid').attr('src', destinations.image);
+    $('img.photo-grid').attr('src', destinations.image);
 
   });
 }

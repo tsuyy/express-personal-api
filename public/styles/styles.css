@@ -83,6 +83,12 @@ img {
   width: 45%;
 }
 
+img.photo-grid {
+  margin: 10px;
+  width: 90%;
+  height: 90%;
+}
+
 .column { float: left; margin: 0 2.5% 1em 0; width: 22.5%; }
 .column:nth-child(4n) { margin-right: 0; }
 .column:nth-child(4n+1) { clear: left; }
