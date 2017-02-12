@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 var db = require('./models');
 
 var profile = {
-  name: 'Yvonne Tsu',
+  name: 'yvonne tsu',
   githubLink: 'https://github.com/tsuyy',
   facebook: 'https://www.facebook.com/yvonnnetsu',
   instagram: 'https://www.instagram.com/yvonnetsu/',
