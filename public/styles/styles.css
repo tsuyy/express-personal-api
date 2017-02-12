@@ -38,6 +38,14 @@ html {
   margin-right:0 !important;
 }
 
+.navbar-brand.page-scroll {
+  padding: 20px;
+  line-height: 1px;
+  display: inline-block !important;
+  float: none;
+  margin-right:0 !important;
+}
+
 .homepage-section {
     height: 100%;
     padding-top: 30px;
@@ -91,4 +99,13 @@ a {
 a:hover {
   color: black;
   text-decoration: none;
+}
+
+button[type=submit], input.form-control {
+  height: 25px;
+}
+
+.glyphicon {
+  line-height: 0px;
+  top: 0px;
 }
