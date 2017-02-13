@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chathura" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chathura|Share+Tech+Mono" rel="stylesheet">
 
     <!-- VENDOR SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -85,24 +85,31 @@
       <!-- destinations section -->
       <section id="destinations" class="destination-section">
         <h4 class='text-center page-title'>destinations</h4>
+        <br>
           <div class="container">
             <div class='row'>
               <form id='newDestinationForm'>
                 <div class="col-md-8 col-md-12 col-lg-12">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="add destination..">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><span class='glyphicon glyphicon-plus'></span></button>
-                      </span>
-                    </div>  <!-- /input-group -->
-                  </div>  <!-- grid -->
-                </form>
-              <br>
+                    <div class="input-group-btn btn-group btn-group-justified" role='group' aria-label='...'>
+                      <button class="btn btn-default creatByn" type="submit">
+                        <span class='glyphicon glyphicon-plus'></span>
+                      </button>
+                      <button class="btn btn-default updateBtn" type="submit">
+                        <span class='glyphicon glyphicon-pencil'></span>
+                      </button>
+                      <button class="btn btn-default deleteBtn" type="submit">
+                        <span class='glyphicon glyphicon-remove'></span>
+                      </button>
+                    </div>
+                    <input type="text" class="form-control">
+                  </div>  <!-- /input-group -->
+                </div>  <!-- grid -->
+              </form>
             </div>  <!-- row -->
             <div class='row'>
               <div class="col-md-8 col-md-12 col-lg-12">
                 <ul id='destinationTarget' class='list-unstyled'>
-
               </div>
             </div>
           </div>
