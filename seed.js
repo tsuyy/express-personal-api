@@ -4,45 +4,69 @@ var togo_list = [
   {
     name: 'Glacier Point',
     location: 'Yosemite Valley, CA',
-    coordinates: '37.7304° N, 119.5736° W',
+    coordinates: 'lat: 37.73, lng: -119.57',
     image: 'https://lh3.googleusercontent.com/-ZxeeRH4qJFo/WJgnX0Hx55I/AAAAAAABFbM/IPkUpHFtnBguLCErKrJefoEnERuoO_o0ACJoC/w530-h663-p-rw/milky%2Bway.%2Bglacier%2Bpoint.%2Byosemite.%2Bcalifornia.%2Bby%2BTanner%2BWendell%2BStewart%2Bwww.tannerwendell.com.jpg'
   },
   {
     name: 'Fallen Leaf Lake',
     location: 'Lake Forest, CA',
-    coordinates: '38.8986° N, 120.0636° W',
+    coordinates: 'lat: 38.90, lng: -120.06',
     image: ''
   },
   {
     name: 'Point Reyes National Seashore',
     location: 'Inverness, CA',
-    coordinates: '38.0723° N, 122.8817° W',
+    coordinates: 'lat: 38.07, lng: -122.88',
     image: ''
   },
   {
     name: 'Bonsai Rock',
     location: 'New Washoe City, NV',
-    coordinates: '39.1852° N, 119.9280° W',
+    coordinates: 'lat: 39.19, lng: -119.92',
+    image: ''
+  },
+  {
+    name: 'Kirby Cove',
+    location: 'Sausalito, CA',
+    coordinates: 'lat: 36.50, lng: -117.07',
+    image: ''
+  },
+  {
+    name: 'Big Sur',
+    location: 'Central Coast of CA',
+    coordinates: 'lat: 36.36, lng: -121.85',
+    image: ''
+  },
+  {
+    name: 'Antelope Canyon',
+    location: 'Navajo, AZ',
+    coordinates: 'lat: 36.86, lng: -111.37',
+    image: ''
+  },
+  {
+    name: 'Death Valley',
+    location: 'West California',
+    coordinates: 'lat: 36.50, lng: -117.07',
+    image: ''
+  },
+  {
+    name: 'Horseshow Bend',
+    location: 'Page, AZ',
+    coordinates: 'lat: 36.87, lng: -111.51',
+    image: ''
+  },
+  {
+    name: 'Joshua Tree',
+    location: 'CA',
+    coordinates: 'lat: 33.87, lng: -115.90',
     image: ''
   },
   {
     name: 'Baker Beach',
     location: 'San Francisco, CA',
-    coordinates: '37.7936° N, 122.4836° W',
-    image: ''
+    coordinates: 'lat: 37.79, lng: -122.48',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
   }
-  // {
-  //   name: 'Kirby Cove',
-  //   location: 'Sausalito, CA',
-  //   coordinates: '37.8286° N, 122.4905° W',
-  //   image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
-  // },
-  // {
-  //   name: 'Baker Beach',
-  //   location: 'San Francisco, CA',
-  //   coordinates: '37.7936° N, 122.4836° W',
-  //   image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg'
-  // },
 ]
 
 //remove all records that match {} -- which means remove ALL records
