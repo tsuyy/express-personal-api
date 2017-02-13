@@ -88,11 +88,11 @@
         <br>
           <div class="container">
             <div class='row'>
-              <form id='newDestinationForm'>
+              <form id='destinationForm'>
                 <div class="col-md-8 col-md-12 col-lg-12">
                   <div class="input-group">
                     <div class="input-group-btn btn-group btn-group-justified" role='group' aria-label='...'>
-                      <button class="btn btn-default creatByn" type="submit">
+                      <button class="btn btn-default createBtn" type="submit">
                         <span class='glyphicon glyphicon-plus'></span>
                       </button>
                       <button class="btn btn-default updateBtn" type="submit">
@@ -110,6 +110,8 @@
             <div class='row'>
               <div class="col-md-8 col-md-12 col-lg-12">
                 <ul id='destinationTarget' class='list-unstyled'>
+
+                </ul>
               </div>
             </div>
           </div>
@@ -121,39 +123,57 @@
           <div class="container">
             <div class="row destination-img-bliocks">
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg">
+                  <span class='caption'>Baker Beach</span>
+                    <img class="img-responsive photo-grid" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Baker_beach_1.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="http://www.naturefocused.com/archives/lake-tahoe/IMG_3_0787.jpg">
+                  <span class='caption'>Fallen Leaf Lake</span>
+                    <img class="img-responsive photo-grid" src="http://www.naturefocused.com/archives/lake-tahoe/IMG_3_0787.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="https://c1.staticflickr.com/7/6129/5916495923_f0dc42b7bb_b.jpg">
+                  <span class='caption'>Point Reyes</span>
+                    <img class="img-responsive photo-grid" src="https://c1.staticflickr.com/7/6129/5916495923_f0dc42b7bb_b.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/milky-way-over-the-bonsai-rock-of-lake-tahoe-beau-rogers.jpg">
+                  <span class='caption'>Bonsai Rock</span>
+                    <img class="img-responsive photo-grid" src="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/milky-way-over-the-bonsai-rock-of-lake-tahoe-beau-rogers.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="http://photorator.com/photos/images/doorway-to-heaven-pfeiffer-beach-in-big-sur-california--16425.jpg">
+                  <span class='caption'>Big Sur</span>
+                    <img class="img-responsive photo-grid" src="http://photorator.com/photos/images/doorway-to-heaven-pfeiffer-beach-in-big-sur-california--16425.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-                <a class="img-rounded" href="#">
-                  <span class='caption'></span>
-                    <img class="img-responsive photo-grid" src="" alt="">
+                <a class="img-rounded" href="https://s-media-cache-ak0.pinimg.com/originals/b0/4a/b9/b04ab9b76e5705fa856a244e2e1e00a4.jpg">
+                  <span class='caption'>Antelope Canyon</span>
+                    <img class="img-responsive photo-grid" src="https://s-media-cache-ak0.pinimg.com/originals/b0/4a/b9/b04ab9b76e5705fa856a244e2e1e00a4.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-4 thumb">
+                <a class="img-rounded" href="http://www.wallpaperbetter.com/wallpaper/604/232/971/landscape-nature-desert-sunset-death-valley-sand-mountain-shrubs-sky-clouds-dune-1080P-wallpaper-middle-size.jpg">
+                  <span class='caption'>Death Valley</span>
+                    <img class="img-responsive photo-grid" src="http://www.wallpaperbetter.com/wallpaper/604/232/971/landscape-nature-desert-sunset-death-valley-sand-mountain-shrubs-sky-clouds-dune-1080P-wallpaper-middle-size.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-4 thumb">
+                <a class="img-rounded" href="http://arttoframesblog.com/wp-content/uploads/2015/02/horseshoe-bend-page-az.jpg">
+                  <span class='caption'>Horseshoe Bend</span>
+                    <img class="img-responsive photo-grid" src="http://arttoframesblog.com/wp-content/uploads/2015/02/horseshoe-bend-page-az.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-4 thumb">
+                <a class="img-rounded" href="https://static01.nyt.com/images/2015/10/08/travel/08intransitphoto-joshua/08intransitphoto-joshua-master1050.jpg">
+                  <span class='caption'>Joshua Tree</span>
+                    <img class="img-responsive photo-grid" src="https://static01.nyt.com/images/2015/10/08/travel/08intransitphoto-joshua/08intransitphoto-joshua-master1050.jpg" alt="">
                 </a>
               </div>
             </div>

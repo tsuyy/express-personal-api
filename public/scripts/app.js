@@ -1,14 +1,14 @@
 var allDestinations = [];
 var $destinationList;
 var profileData;
-var $destinationHtml;
+var destinationInput;
 
 
 $(document).ready(function(){
 
   $destinationList = $('ul#destinationTarget');
 
-  $('#newDestinationForm').on('submit', function(e) {
+  $('.createBtn').on('click', function(e) {
     e.preventDefault();
     $.ajax({
       method: 'POST',
@@ -33,14 +33,14 @@ $(document).ready(function(){
     error: handleError
   });
 
-  // $destinationList.on('click', '.deleteBtn', function() {
-  //   $.ajax({
-  //     method: 'DELETE',
-  //     url: '/api/destinations/' + $(this).attr('data-id'),
-  //     success: deleteDestinationSuccess,
-  //     error: handleError
-  //   });
-  // });
+  $destinationList.on('click', '.deleteBtn', function() {
+    $.ajax({
+      method: 'DELETE',
+      url: '/api/destinations/' + $(this).attr('data-id'),
+      success: deleteDestinationSuccess,
+      error: handleError
+    });
+  });
 
 
 });
@@ -57,24 +57,6 @@ $(document).ready(function(){
 //   var destinationsHtml = getAllDestinationsHtml(allDestinations);
 //   $destinationList.append(destinationsHtml);
 // }
-
-function handleDestinationSuccess(json) {
-  allDestinations = json;
-
-  allDestinations.forEach(function(destinations) {
-    $('img.photo-grid').attr('src', `${destinations.image}`);
-    $('span.caption').text(`${destinations.name}`);
-    $destinationList.append(`
-      <input type="checkbox">
-        <label>${destinations.name} in ${destinations.location}
-      </label>
-      <br>
-    `);
-  });
-}
-
-
-
 
 function handleSuccess(json) {
   profileData = json;
@@ -132,26 +114,42 @@ function handleSuccess(json) {
   });
 }
 
-function handleError(xhr, status, errorThrown) {
-  console.log(errorThrown);
+function handleDestinationSuccess(json) {
+  allDestinations = json;
+
+  allDestinations.forEach(function(destinations) {
+    // $('img.photo-grid').attr('src', `${destinations.image}`);
+    // $('span.caption').text(`${destinations.name}`);
+
+    $destinationList.append(`<li>
+      <input type="checkbox">
+        <label>${destinations.name} in ${destinations.location}</label>
+        </li>
+      <br>`);
+  });
 }
 
 function newDestinationSuccess(json) {
-  $destinationList.append(`<input type="checkbox">
-          <label>$('#newDestinationForm input').val('')</label>
-          <br>`);
+  destinationInput = $('#destinationForm input').val('');
+  $destinationList.append(`<li>
+    <input type="checkbox">
+      <label>${destinationInput}</label>
+      </li>
+    <br>`)
 }
 
-function deleteDestinationSuccess(json) {
-  var destination = json;
-  var destinationId = destination._id;
+// function deleteDestinationSuccess(json) {
+//   var destination = json;
+//   var destinationId = destination._id;
+//
+//   for(var index = 0; index < allDestinations.length; index++) {
+//     if(allDestinations[index]._id === destinationId) {
+//       allDestinations.splice(index, 1);
+//       break;
+//     }
+//   }
+// }
 
-  // find the book with the correct ID and remove it from our allBooks array
-  for(var index = 0; index < allDestinations.length; index++) {
-    if(allDestinations[index]._id === destinationId) {
-      allDestinations.splice(index, 1);
-      break;  // we found our book - no reason to keep searching (this is why we didn't use forEach)
-    }
-  }
-  // render();
+function handleError(xhr, status, errorThrown) {
+  console.log(errorThrown);
 }
