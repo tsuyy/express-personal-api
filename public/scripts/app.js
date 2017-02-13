@@ -1,10 +1,12 @@
 var allDestinations = [];
+var $destinationList;
 var profileData;
+var $destinationHtml;
 
 
 $(document).ready(function(){
 
-  $destinationList = $('#destinationTarget');
+  $destinationList = $('ul#destinationTarget');
 
   $('#newDestinationForm').on('submit', function(e) {
     e.preventDefault();
@@ -31,33 +33,25 @@ $(document).ready(function(){
     error: handleError
   });
 
-  $destinationList.on('click', '.deleteBtn', function() {
-    $.ajax({
-      method: 'DELETE',
-      url: '/api/destinations/' + $(this).attr('data-id'),
-      success: deleteDestinationSuccess,
-      error: handleError
-    });
-  });
+  // $destinationList.on('click', '.deleteBtn', function() {
+  //   $.ajax({
+  //     method: 'DELETE',
+  //     url: '/api/destinations/' + $(this).attr('data-id'),
+  //     success: deleteDestinationSuccess,
+  //     error: handleError
+  //   });
+  // });
 
 
 });
 
-// function getDestinationHtml(destination) {
-//   return ($('div.destination-image-blocks').append(`
-//           <div class="col-lg-3 col-md-4 col-xs-4 thumb">
-//             <a class="img-rounded" href="${destination.image}">
-//               <span class='caption'>${destination.name}</span>
-//                 <img class="img-responsive photo-grid" src="${desination.image}" alt="">
-//             </a>
-//            </div>
-//          `));
-// }
 
+
+//
 // function getAllDestinationsHtml(destinations) {
 //   return destinations.map(getDestinationHtml).join("");
 // }
-
+//
 // function render() {
 //   $destinationList.empty();
 //   var destinationsHtml = getAllDestinationsHtml(allDestinations);
@@ -70,12 +64,12 @@ function handleDestinationSuccess(json) {
   allDestinations.forEach(function(destinations) {
     $('img.photo-grid').attr('src', `${destinations.image}`);
     $('span.caption').text(`${destinations.name}`);
-    $('ul#destinationTarget').append(`
+    $destinationList.append(`
       <input type="checkbox">
         <label>${destinations.name} in ${destinations.location}
       </label>
       <br>
-      `);
+    `);
   });
 }
 
@@ -143,8 +137,9 @@ function handleError(xhr, status, errorThrown) {
 }
 
 function newDestinationSuccess(json) {
-  $('#newDestinationForm input').val('')
-  // render();
+  $destinationList.append(`<input type="checkbox">
+          <label>$('#newDestinationForm input').val('')</label>
+          <br>`);
 }
 
 function deleteDestinationSuccess(json) {
