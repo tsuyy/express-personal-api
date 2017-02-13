@@ -68,7 +68,13 @@ html {
 }
 
 .destination-section {
-    height: 200%;
+    height: 180%;
+    padding-top: 1px;
+    text-align: center;
+    background: #F7F5F5;
+}
+.gallery-section {
+    height: 100%;
     padding-top: 30px;
     text-align: center;
     background: #F7F5F5;

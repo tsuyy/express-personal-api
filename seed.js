@@ -33,7 +33,7 @@ var togo_list = [
   },
   {
     name: 'Big Sur',
-    location: 'Central Coast of CA',
+    location: 'Central Coast of California',
     coordinates: 'lat: 36.36, lng: -121.85',
     image: ''
   },
@@ -45,19 +45,19 @@ var togo_list = [
   },
   {
     name: 'Death Valley',
-    location: 'West California',
+    location: 'Eastern California',
     coordinates: 'lat: 36.50, lng: -117.07',
     image: ''
   },
   {
-    name: 'Horseshow Bend',
+    name: 'Horseshoe Bend',
     location: 'Page, AZ',
     coordinates: 'lat: 36.87, lng: -111.51',
     image: ''
   },
   {
     name: 'Joshua Tree',
-    location: 'CA',
+    location: 'Southern California',
     coordinates: 'lat: 33.87, lng: -115.90',
     image: ''
   },

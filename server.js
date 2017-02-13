@@ -31,12 +31,12 @@ var profile = {
            type: 'Doge',
            breed: 'Siberian and Malamute Husky Mix',
            age: '7 yeards old',
-           imageUrl: '/public/images/tiger1.jpg'},
+           imageUrl: 'http://localhost:3000/images/tiger1.jpg'},
           {name: 'Koda',
            type: 'Doge',
            breed: 'German Shepherd',
            age: '2 months old',
-           imageUrl: '/public/images/koda1.jpg'} ],
+           imageUrl: 'http://localhost:3000/images/koda1.jpg'} ],
   image: 'http://localhost:3000/images/me.jpg'
 }
 

@@ -70,7 +70,9 @@ function handleDestinationSuccess(json) {
   allDestinations.forEach(function(destinations) {
     $('img.photo-grid').attr('src', `${destinations.image}`);
     $('span.caption').text(`${destinations.name}`);
+    $('ul#destinationTarget').append(`<li><h4>${destinations.name} in ${destinations.location}</h4></li>`);
   });
+
 }
 
 function handleSuccess(json) {
